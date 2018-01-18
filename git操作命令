@@ -1,0 +1,111 @@
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git config --global user.name "wubaozjm"
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git config --global user.email "812444041@qq.com"
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git init
+Reinitialized existing Git repository in E:/ccf/.git/
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git clone git@github.com:wubaozjm/ccf.git
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git status
+On branch master
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git remote add origin https://github.com/wubaozjm/ccf.git
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master|MERGING)
+$ git merge --abort
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git reset --merge
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git pull origin master
+From https://github.com/wubaozjm/ccf
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git pull origin master --allow-unrelated-hi
+F
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master|MERGING)
+$ git commit -m "fi"
+[master afbae46] fi
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git pull origin master --allow-unrelated-hi
+From https://github.com/wubaozjm/ccf
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 435 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/wubaozjm/ccf.git
+   92c7181..afbae46  master -> master
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git add --all
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+        modified:   ccf (untracked content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git add ccf/最小差值/main.c
+fatal: Pathspec 'ccf/最小差值/main.c' is in submodule 'ccf'
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git add --all
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   "\346\234\200\345\260\217\345\267\256\345\200\274.c"
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+        modified:   ccf (untracked content)
+
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git commit -m "2"
+[master ac6e81a] 2
+ 1 file changed, 77 insertions(+)
+ create mode 100644 "\346\234\200\345\260\217\345\267\256\345\200\274.c"
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 873 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/wubaozjm/ccf.git
+   afbae46..ac6e81a  master -> master
+
+thinkpad@Lenovo-PC MINGW64 /e/ccf (master)
